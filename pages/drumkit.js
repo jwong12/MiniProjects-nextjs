@@ -27,12 +27,13 @@ export default function DrumKit() {
             audio.currentTime = 0;
             audio.play();
 
-            keys.forEach((key) => {
+            const keysCopy = [...keys];
+            keysCopy.forEach((key) => {
                 if (key.code === e.keyCode) {
                     key.runAnimation = true;
-                    console.log(key)
                 }
             });
+            setKeys(keysCopy);
         }
         
         if (!audio) return;
