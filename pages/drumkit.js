@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Key from '../components/drumkit/key';
 import styles from '../styles/DrumKit.module.css';
 
 export default function DrumKit() {
@@ -40,6 +39,16 @@ export default function DrumKit() {
         
     }
 
+    function removeTransition(e) {
+        if (e.propertyName === 'transform') {
+            const keysCopy = [...keys];
+            keysCopy.forEach((key) => {
+                key.runAnimation = false;
+            });
+            setKeys(keysCopy);
+        }
+    }
+
     return (
         <>
             <Head>
@@ -48,14 +57,18 @@ export default function DrumKit() {
             </Head>
             <div className={styles.container}>
                 <div className={styles.keysContainer}>
-                    {keys.map((key) => <Key 
+                    {keys.map((key) => <div 
                         key={key.code} 
-                        name={key.name} 
-                        code={key.code} 
-                        kit={key.kit} 
-                        src={key.src}
-                        animation={ key.runAnimation }
-                    />)}
+                    >
+                        <div className={ key.runAnimation ? `${styles.box} ${styles.playing}` : styles.box }
+                            data-key={key.code}
+                            onTransitionEnd={ removeTransition }
+                        >
+                            <div className={styles.key}>{key.name}</div>
+                            <div className={styles.kit}>{key.kit}</div>
+                        </div>
+                        <audio data-key={key.code} src={key.src}></audio>
+                    </div>)}
                 </div>
             </div>
         </>

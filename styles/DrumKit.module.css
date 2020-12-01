@@ -15,3 +15,30 @@
     max-width: 75rem;
     margin: 20em auto 0;
 }
+
+.box {
+    border: solid 0.3rem black;
+    border-radius: 0.5rem;
+    text-align: center;
+    height: 7rem;
+    width: 7rem;
+    margin: 1em;
+    transition: transform .07s ease, border .07s ease;
+}
+
+.playing {
+    transform: scale(1.1);
+    border: solid 0.4rem yellow;
+}
+
+.key {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: white;
+    padding-top: 0.4em;
+}
+
+.kit {
+    font-size: 1.1rem;
+    color: rgb(255, 180, 17);
+}
