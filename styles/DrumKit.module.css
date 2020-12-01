@@ -1,0 +1,17 @@
+
+.container {
+    height: 100vh;
+    background: url('https://i.imgur.com/b9r5sEL.jpg') bottom center;
+    background-size: cover;
+    font-family: 'Merriweather', serif;
+    display: flex;
+    align-items: center;
+}
+
+.keysContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 75rem;
+    margin: 20em auto 0;
+}
