@@ -1,0 +1,52 @@
+
+.container {
+    min-height: 100vh;
+    background: rgb(167,147,159);
+    background: linear-gradient(0deg, rgba(167,147,159,1) 0%, rgba(149,129,141,1) 100%);
+    font-family: 'Nunito', sans-serif;
+}
+
+.banner {
+    width: 100%;
+    background-color: rgb(36, 60, 80);
+}
+
+.h1 {
+    margin: 0;
+    padding: 3rem 0 2rem;
+    font-size: 4.6rem;
+    color: #5BC0EB;
+    text-align: center;
+}
+
+.inputBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.inputLabel {
+    font-size: 2.6rem;
+    color: white;
+    margin-right: 1rem;
+}
+
+.bodyWrapper {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.image {
+    max-width: 80%;
+    transform: rotate3d(1, 1, 1, 360deg);
+}
